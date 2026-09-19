@@ -1,0 +1,8 @@
+#root{
+    background: linear-gradient(90deg, rgb(196, 241, 255), #84d9f8);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

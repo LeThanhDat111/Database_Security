@@ -1,0 +1,58 @@
+.label_name-account,
+.label_pass-account {
+	margin-bottom: 5px;
+	margin-top: 10px;
+	color: rgb(212, 223, 14);
+	font-family: serif;
+}
+
+h1 {
+	margin-bottom: 30px;
+	background: linear-gradient(90deg, rgb(63, 2, 177), rgb(141, 6, 171));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.login_container div input {
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	border: transparent;
+	padding-left: 10px;
+}
+
+.login_container {
+	background: linear-gradient(160deg, rgb(19, 234, 191), rgb(101, 49, 190));
+	padding: 50px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn_login {
+	margin-left: auto;
+	margin-top: 20px;
+	padding: 3px 20px;
+	border-radius: 5px;
+	border: transparent;
+	background-color: rgb(224, 154, 63);
+	color: rgb(5, 43, 149);
+	text-shadow:
+		0 0 1px rgb(239, 240, 244),
+		0 0 2px rgb(229, 229, 229),
+		0 0 3px rgb(240, 241, 244);
+}
+
+.btn_login:hover {
+	background-color: rgb(167, 99, 10);
+}
+
+
+.noti_erro{
+    color: rgb(143, 10, 10);
+    font-weight: bold;
+    margin-top: 10px;
+
+}
