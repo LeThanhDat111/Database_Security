@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 export default function Orders() {
 	const [orders, setOrders] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:8080/api/orders')
+		fetch('https://improved-bass-lighter-long.trycloudflare.com/api/orders')
 			.then((response) => response.json())
 			.then((data) => {
 				setOrders(data);

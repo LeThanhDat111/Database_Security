@@ -1,0 +1,29 @@
+.edit_img-login {
+	width: 100%;
+	max-width: 800px;
+	object-fit: contain;
+	height: auto;
+}
+
+.container_login-img {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loginUI_container {
+	display: flex;
+	gap: 50px;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.fit_login {
+	width: 35%;
+    height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

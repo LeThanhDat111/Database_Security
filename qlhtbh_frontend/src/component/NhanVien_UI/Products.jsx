@@ -3,7 +3,7 @@ export default function Products() {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:8080/api/products')
+		fetch('https://improved-bass-lighter-long.trycloudflare.com/api/products')
 			.then((response) => response.json())
 			.then((data) => {
 				setProducts(data);
@@ -20,7 +20,7 @@ export default function Products() {
 			<button>Sửa sản phẩm</button>
 			<button>Xóa sản phẩm</button>
 
-			<table className='table_product'>
+			<table className="table_product">
 				<thead>
 					<tr>
 						<th>MaSP</th>

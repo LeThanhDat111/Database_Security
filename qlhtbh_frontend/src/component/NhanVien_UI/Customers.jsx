@@ -3,7 +3,7 @@ export default function Customers() {
 	const [customers, setCustomers] = useState([]);
 
 	useEffect(() => {
-		fetch('http://localhost:8080/api/customers')
+		fetch('https://improved-bass-lighter-long.trycloudflare.com/api/customers')
 			.then((response) => response.json())
 			.then((data) => {
 				setCustomers(data);
