@@ -3,8 +3,8 @@ import { useReducer } from 'react';
 import NhanVien_UI from './component/NhanVien_UI/NhanVien_UI.jsx';
 import QuanLy_UI from './component/QuanLy_UI/QuanLy_UI.jsx';
 import { Login_UI } from './component/Login_UI/Login_UI.jsx';
+import UseContext_Logout from './component/NhanVien_UI/UseContext_Logout.jsx';
 function App() {
-
 	// Tạo đối tượng mặc định khi chưa đăng nhập, gồm quyền(role),
 	//  có đang đăng nhập không (isLogin), isValid (tài khoản và mật khẩu đúng không)
 	const userState = {
@@ -21,7 +21,7 @@ function App() {
 		switch (action.type) {
 			// Hành động login được thực hiện
 			case 'LOGIN': {
-				//Tạo đổi tượng để nhận name và pass lấy từ component 
+				//Tạo đổi tượng để nhận name và pass lấy từ component
 				// Login từ thuộc tính payload chứa đối tượng userLogin
 				const { name, pass } = action.payload;
 				if (name === 'NV01' && pass === 'Abc12345') {
@@ -51,14 +51,17 @@ function App() {
 		}
 	}
 	return (
-		<>	
+		<>
 			{/* Hiển thị Loign khi mới vào web. Nếu đã đăng thì ẩn component Login ngược lại thì hiện */}
 			{state.isLogin ? undefined : <Login_UI dispatch={dispatch} state={state} />}
 
 			{/* Kiểm tra xem người dùng đang đăng nhập với vai trò nào */}
-			{state.isLogin && state.role === 'Nhân Viên' && <NhanVien_UI />}
+			{state.isLogin && state.role === 'Nhân Viên' && (
+				<UseContext_Logout.Provider value={dispatch}>
+					<NhanVien_UI />
+				</UseContext_Logout.Provider>
+			)}
 			{state.isLogin && state.role === 'Quản Lý' && <QuanLy_UI />}
-
 		</>
 	);
 }

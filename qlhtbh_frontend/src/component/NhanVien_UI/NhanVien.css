@@ -18,9 +18,8 @@ header {
 
 main {
 	display: flex;
-	gap: 100px;
 	border-top: 1px solid rgb(73, 51, 217);
-	padding: 10px;
+	height: 550px;
 }
 
 section {
@@ -28,16 +27,30 @@ section {
 	flex-direction: column;
 	gap: 10px;
 	width: 200px;
+	padding: 10px 0;
+	background-color: rgb(40, 8, 110);
+	width: 300px;
 }
 
-section button {
+section .cont_option-menu button {
 	border: transparent;
-	border-radius: 5px;
 	padding: 5px 20px;
-	background-color: burlywood;
+	color: rgb(242, 97, 29);
+	font-family: cursive;
+	font-weight: bold;
+	background-color: transparent;
+}
+section .cont_option-menu .btn_onpick {
+	background-color: rgb(250, 250, 250);
+}
+section h2 {
+	padding-left: 5px;
+	color: rgb(166, 128, 248);
+	font-family: cursive;
+	padding-left: 20px;
 }
 
-section button:hover {
+section .cont_option-menu button:hover {
 	transform: translateY(-3px);
 	transition: transform 0.3s ease-out;
 }
@@ -55,4 +68,61 @@ table thead tr th {
 table tbody tr td {
 	padding: 10px;
 	border: 1px solid;
+}
+
+/* -----------------section-------------------- */
+.cont_option-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.img_logout {
+	width: 20px;
+	height: 20px;
+}
+
+.btn_logout {
+	background: transparent;
+	border: transparent;
+	color: rgb(237, 12, 12);
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 5px;
+	width: 100%;
+	font-family: cursive;
+	padding-left: 20px;
+}
+
+.btn_logout:hover {
+	background-color: rgb(54, 42, 150);
+}
+
+.cont_logout {
+	margin: auto 0px 15px 0;
+}
+/* ---------------sidebar---------------------- */
+sidebar {
+	background-color: rgb(140, 140, 239);
+	width: 100%;
+}
+
+/* ------------------footer-------------------------- */
+footer p {
+	color: rgb(245, 245, 245);
+	font-size: x-large;
+}
+
+footer {
+	background-color: rgb(4, 17, 87);
+	height: 139px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header{
+	/* background-color: aqua; */
 }

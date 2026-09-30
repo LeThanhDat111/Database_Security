@@ -7,16 +7,19 @@ export default function NhanVien_UI() {
 	return (
 		<div className="nhanvien_container">
 			<header>
-				<h1>Hệ thống quản lý bán hàng</h1>
+				<h1>Quản Lý Hệ Thống Bán Hàng</h1>
 				<div className="info_employee">
 					<h3 className="id_imployee">Xin chào: NV01</h3>
 					<h3 className="role_imployee">Vai trò: Nhân viên</h3>
 				</div>
 			</header>
 			<main>
-				<Section setActiveMenu={setActiveMenu} />
+				<Section setActiveMenu={setActiveMenu} activeMenu={activeMenu} />
 				<Sidebar activeMenu={activeMenu} />
 			</main>
+			<footer>
+				<p> &copy;2026 Code by Le Thanh Dat</p>
+			</footer>
 		</div>
 	);
 }

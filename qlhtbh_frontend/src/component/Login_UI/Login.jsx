@@ -18,15 +18,15 @@ export default function Login({ dispatch, state }) {
 
 	return (
 		<div className="login_container">
-			<h1>Đăng Nhập</h1>
+			<h1 className='label_login'>Đăng Nhập</h1>
 
 			<div className="input_name-account">
 				<p className="label_name-account">Tài khoản:</p>
-				<input name="name" type="text" placeholder="Nhập tên tài khoản..." onChange={HandleUser} className='ip_name'/>
+				<input name="name" type="text" placeholder="Nhập tên tài khoản..." onChange={HandleUser} className="ip_name" />
 			</div>
 			<div className="input_pass-account">
 				<p className="label_pass-account">Mật khẩu:</p>
-				<input name="pass" type="password" placeholder="Nhập mật khẩu..." onChange={HandleUser} className='ip_pass' />
+				<input name="pass" type="password" placeholder="Nhập mật khẩu..." onChange={HandleUser} className="ip_pass" />
 			</div>
 			{/* Kiểm tra xem tài khoản hay mật khẩu có đúng không */}
 			{state.isValid ? undefined : <p className="noti_erro">Tài khoản hoặc mật khẩu không đúng!</p>}

@@ -3,7 +3,7 @@ export default function Products() {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		fetch('https://improved-bass-lighter-long.trycloudflare.com/api/products')
+		fetch('http://localhost:8080/api/products')
 			.then((response) => response.json())
 			.then((data) => {
 				setProducts(data);

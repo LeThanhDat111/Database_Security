@@ -7,7 +7,7 @@
 	max-width: 100px;
 }
 
-h1 {
+.label_login {
 	margin-bottom: 30px;
 	background: linear-gradient(90deg, rgb(143, 230, 237), rgb(213, 210, 214));
 	background-clip: text;
@@ -34,7 +34,7 @@ h1 {
 	padding: 6px 30px;
 	border-radius: 5px;
 	border: transparent;
-	background-color: rgb(225, 93, 49);
+	background-color: rgb(236, 79, 55);
 	color: rgb(63, 35, 141);
 	text-shadow:
 		0 0 1px rgb(239, 240, 244),
@@ -54,7 +54,8 @@ h1 {
 
 .ip_name,
 .ip_pass {
-	padding: 10px 50px 10px 5px;
+	padding: 10px 5px 10px 5px;
+	width: 250px;
 	border-radius: 7px;
 	border: transparent;
 	max-width: 300px;
