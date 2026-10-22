@@ -17,13 +17,43 @@
 	gap: 50px;
 	align-items: center;
 	width: 100%;
-	min-height: 100vh;
+	height: 90%;
 }
 
 .fit_login {
 	width: 35%;
-    height: auto;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.btn_modelogin {
+	border: transparent;
+	background: transparent;
+	margin: 10px 10px;
+}
+
+.img_modelogin {
+	height: 40px;
+	width: fit-content;
+	object-fit: contain;
+}
+
+.is_warning {
+	position: fixed;
+	background: rgba(250, 0, 0, 0.1);
+	pointer-events: none;
+	inset: 0;
+	z-index: 9999;
+	animation: red-flash 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes red-flash {
+	from {
+		opacity: 0.15;
+	}
+	to {
+		opacity: 0.8;
+	}
 }

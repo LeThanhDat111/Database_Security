@@ -9,8 +9,8 @@ function App() {
 	//  có đang đăng nhập không (isLogin), isValid (tài khoản và mật khẩu đúng không)
 	const userState = {
 		role: null,
+		name: null,
 		isLogin: false,
-		isValid: true,
 	};
 
 	//Khai báo hai biến state mang trạng thái login và hàm dispatch để nhận hành động
@@ -21,47 +21,35 @@ function App() {
 		switch (action.type) {
 			// Hành động login được thực hiện
 			case 'LOGIN': {
-				//Tạo đổi tượng để nhận name và pass lấy từ component
-				// Login từ thuộc tính payload chứa đối tượng userLogin
-				const { name, pass } = action.payload;
-				if (name === 'NV01' && pass === 'Abc12345') {
-					return {
-						role: 'Nhân Viên',
-						isLogin: true,
-						isValid: true,
-					};
-				} else if (name === 'QL01' && pass === 'Abc12345') {
-					return {
-						role: 'Quản Lý',
-						isLogin: true,
-						isValid: true,
-					};
-				}
-
-				//Nếu tài khoản hoặc sai mật khẩu thì chuyển isValid sang flase để thông báo
-				return { ...state, isValid: false };
+				return {
+					role: action.payload.role,
+					name: action.payload.name,
+					isLogin: true,
+				};
 			}
-			//Khi logout thì chuyển role ,isLogin, isValid về trạng thái ban đầu
+			//Khi logout thì chuyển role ,isLogin, name về trạng thái ban đầu
 			case 'LOGOUT':
 				return {
 					role: null,
+					name: null,
 					isLogin: false,
-					isValid: true,
 				};
+			default:
+				return state;
 		}
 	}
 	return (
 		<>
 			{/* Hiển thị Loign khi mới vào web. Nếu đã đăng thì ẩn component Login ngược lại thì hiện */}
-			{state.isLogin ? undefined : <Login_UI dispatch={dispatch} state={state} />}
+			{state.isLogin ? undefined : <Login_UI dispatch={dispatch} />}
 
 			{/* Kiểm tra xem người dùng đang đăng nhập với vai trò nào */}
-			{state.isLogin && state.role === 'Nhân Viên' && (
+			{state.isLogin && state.role === 'Customer' && (
 				<UseContext_Logout.Provider value={dispatch}>
 					<NhanVien_UI />
 				</UseContext_Logout.Provider>
 			)}
-			{state.isLogin && state.role === 'Quản Lý' && <QuanLy_UI />}
+			{state.isLogin && state.role === 'TruongPhongNS' && <QuanLy_UI />}
 		</>
 	);
 }

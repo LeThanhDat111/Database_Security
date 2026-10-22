@@ -3,10 +3,10 @@ import Orders from './Orders';
 import Customers from './Customers';
 export default function Sidebar({ activeMenu }) {
 	return (
-		<sidebar>
+		<aside>
 			{activeMenu === 'products' && <Products />}
 			{activeMenu === 'orders' && <Orders />}
 			{activeMenu === 'customers' && <Customers />}
-		</sidebar>
+		</aside>
 	);
 }
