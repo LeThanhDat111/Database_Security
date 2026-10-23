@@ -1,7 +1,7 @@
 import './App.css';
 import { useReducer } from 'react';
 import NhanVien_UI from './component/NhanVien_UI/NhanVien_UI.jsx';
-import QuanLy_UI from './component/QuanLy_UI/QuanLy_UI.jsx';
+import Customer_UI from './component/customer_component/Customer_UI.jsx';
 import { Login_UI } from './component/Login_UI/Login_UI.jsx';
 import UseContext_Logout from './component/NhanVien_UI/UseContext_Logout.jsx';
 function App() {
@@ -44,12 +44,12 @@ function App() {
 			{state.isLogin ? undefined : <Login_UI dispatch={dispatch} />}
 
 			{/* Kiểm tra xem người dùng đang đăng nhập với vai trò nào */}
-			{state.isLogin && state.role === 'Customer' && (
+			{state.isLogin && state.role === 'TruongPhongNS' && (
 				<UseContext_Logout.Provider value={dispatch}>
 					<NhanVien_UI />
 				</UseContext_Logout.Provider>
 			)}
-			{state.isLogin && state.role === 'TruongPhongNS' && <QuanLy_UI />}
+			{state.isLogin && state.role === 'Customer' && <Customer_UI />}
 		</>
 	);
 }

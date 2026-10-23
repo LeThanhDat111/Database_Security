@@ -10,13 +10,13 @@
 	height: 100%;
 }
 
-header {
+.header_staff {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-main {
+.main_staff {
 	display: flex;
 	border-top: 1px solid rgb(73, 51, 217);
 	height: 550px;
@@ -121,8 +121,4 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-header{
-	/* background-color: aqua; */
 }

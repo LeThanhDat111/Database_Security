@@ -1,0 +1,210 @@
+.container_quanly {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.img_home {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+}
+
+.header_customer {
+	height: 10%;
+	background-color: #0a1830;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.main_customer {
+	height: 90%;
+	position: relative;
+}
+
+.container_logo-shop {
+	width: 200px;
+}
+
+.logo_shop {
+	width: 150px;
+	height: 50px;
+	object-fit: contain;
+	margin-left: -20px;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	gap: 70px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	height: fit-content;
+	width: fit-content;
+	font-size: larger;
+}
+
+.img_nav-customer {
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+
+.dropdwn_icon {
+	width: 15px;
+	margin-left: 5px;
+}
+
+.txt_titel {
+	position: relative;
+	z-index: 1;
+	background-color: #112f7c;
+	display: block;
+	width: fit-content;
+	padding: 5px 25px;
+	color: white;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+.txt_intro {
+	position: relative;
+	z-index: 1;
+	display: block;
+	color: white;
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.txt_intro span {
+	display: block;
+	margin: 15px 0px 0px 140px;
+}
+
+.txt_desc {
+	position: relative;
+	z-index: 1;
+	display: block;
+	color: white;
+	font-size: 20px;
+	margin: 20px 0px 0px 50px;
+}
+
+.content_main-customer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content_main-customer p span {
+	color: #0178ff;
+}
+
+.box_intro {
+	margin-left: 85px;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.box_btn {
+	position: relative;
+	z-index: 1;
+	margin: 30px 0px 0px 50px;
+}
+
+.box_btn button {
+	background: linear-gradient(90deg, #094dcc, #6684c5);
+	border: transparent;
+	width: 170px;
+	height: 44px;
+	border-radius: 20px;
+	color: white;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	transform: scale(1);
+	transition: transform 0.6s ease-out;
+}
+
+.box_btn button::before {
+	content: '';
+	background: linear-gradient(90deg, transparent, rgba(190, 199, 226, 0.45), transparent);
+	transform: skewX(-25deg);
+	position: absolute;
+	left: -100px;
+	z-index: -1;
+	width: 60%;
+	height: 100%;
+	transition: left 0.5s ease-in-out;
+}
+
+.box_btn button:hover {
+	transform: scale(1.1);
+}
+
+.box_btn button:hover::before {
+	left: 100px;
+}
+
+.box_btn button p {
+	display: block;
+	width: 100px;
+	height: 20px;
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+.box_btn button img {
+	width: 20px;
+	margin-left: 5px;
+	transition: transform 0.5s ease-out;
+}
+
+.box_btn button:hover .icon_arrow {
+	transform: translateX(15px);
+}
+
+.box_convinient {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	gap: 10px;
+	margin: auto 0px 80px 130px;
+}
+
+.box_convinient div {
+	display: flex;
+	align-items: center;
+	padding-right: 20px;
+	gap: 15px;
+}
+
+.box_convinient div div p {
+	color: white;
+}
+
+.box_convinient div div span {
+	color: #b5b5b5;
+}
+
+.first_conv,
+.second_conv {
+	border-right: 1px solid #797c7c;
+}
+
+.box_convinient div:hover img {
+	transform: translateY(-7px);
+}
+
+.box_convinient div img {
+	transition: transform 0.3s ease-in;
+}

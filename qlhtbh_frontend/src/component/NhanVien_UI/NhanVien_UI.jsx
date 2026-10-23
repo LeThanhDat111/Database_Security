@@ -6,14 +6,14 @@ export default function NhanVien_UI() {
 	const [activeMenu, setActiveMenu] = useState('products');
 	return (
 		<div className="nhanvien_container">
-			<header>
+			<header className="header_staff">
 				<h1>Quản Lý Hệ Thống Bán Hàng</h1>
 				<div className="info_employee">
 					<h3 className="id_imployee">Xin chào: NV01</h3>
 					<h3 className="role_imployee">Vai trò: Nhân viên</h3>
 				</div>
 			</header>
-			<main>
+			<main className="main_staff">
 				<Section setActiveMenu={setActiveMenu} activeMenu={activeMenu} />
 				<Sidebar activeMenu={activeMenu} />
 			</main>
