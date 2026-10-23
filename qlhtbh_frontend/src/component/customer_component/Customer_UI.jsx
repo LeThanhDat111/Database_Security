@@ -1,4 +1,3 @@
-import homepage from '../../assets/HomePage.png';
 import './Customer.css';
 import LogoShop from '../../assets/LogoShop.png';
 import User from '../../assets/User.svg';
@@ -10,7 +9,11 @@ import Arrow from '../../assets/Arrow.svg';
 import Express_delivery from '../../assets/Express_delivery.svg';
 import Security from '../../assets/Security.svg';
 import Speech_bubble from '../../assets/Speech_bubble.svg';
+import Banner from './Banner.jsx';
+import Button from './Button.jsx';
+import { useState } from 'react';
 export default function QuanLy_UI() {
+	const [number, setNumber] = useState(0);
 	return (
 		<div className="container_quanly">
 			<header className="header_customer">
@@ -59,7 +62,7 @@ export default function QuanLy_UI() {
 				</ul>
 			</header>
 			<main className="main_customer">
-				<img src={homepage} alt="home_page" className="img_home" />
+				<Banner number={number} updateNumber={setNumber} />
 				<div className="content_main-customer">
 					<div className="box_intro">
 						<p className="txt_titel">Công Nghệ Hiện Đại</p>
@@ -105,6 +108,9 @@ export default function QuanLy_UI() {
 								</p>
 							</div>
 						</div>
+					</div>
+					<div className="list_img">
+						<Button number={number} updateNumber={setNumber}></Button>
 					</div>
 				</div>
 			</main>
